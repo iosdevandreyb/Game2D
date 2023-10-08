@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D51BEA315A52FA46ECE9A42 /* libPods-Game2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF38D521A131564901DD540 /* libPods-Game2D.a */; };
 		5822D84B2AD2B2D7009CF5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D84A2AD2B2D7009CF5C2 /* AppDelegate.swift */; };
 		5822D84D2AD2B2D7009CF5C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D84C2AD2B2D7009CF5C2 /* SceneDelegate.swift */; };
-		5822D84F2AD2B2D7009CF5C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D84E2AD2B2D7009CF5C2 /* ViewController.swift */; };
+		5822D84F2AD2B2D7009CF5C2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D84E2AD2B2D7009CF5C2 /* GameViewController.swift */; };
 		5822D8522AD2B2D7009CF5C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5822D8502AD2B2D7009CF5C2 /* Main.storyboard */; };
 		5822D8542AD2B2D8009CF5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5822D8532AD2B2D8009CF5C2 /* Assets.xcassets */; };
 		5822D8572AD2B2D8009CF5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5822D8552AD2B2D8009CF5C2 /* LaunchScreen.storyboard */; };
+		5822D8672AD2EBAE009CF5C2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D8662AD2EBAE009CF5C2 /* MenuViewController.swift */; };
+		5822D8692AD2EBC0009CF5C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D8682AD2EBC0009CF5C2 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5822D8472AD2B2D7009CF5C2 /* Game2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5822D84A2AD2B2D7009CF5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5822D84C2AD2B2D7009CF5C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5822D84E2AD2B2D7009CF5C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5822D84E2AD2B2D7009CF5C2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5822D8512AD2B2D7009CF5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5822D8532AD2B2D8009CF5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5822D8562AD2B2D8009CF5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5822D8582AD2B2D8009CF5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5822D8662AD2EBAE009CF5C2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5822D8682AD2EBC0009CF5C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		62E3D5FF8448A1A81C5B0807 /* Pods-Game2D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game2D.debug.xcconfig"; path = "Target Support Files/Pods-Game2D/Pods-Game2D.debug.xcconfig"; sourceTree = "<group>"; };
+		783414F6DEE797B801C46B5C /* Pods-Game2D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game2D.release.xcconfig"; path = "Target Support Files/Pods-Game2D/Pods-Game2D.release.xcconfig"; sourceTree = "<group>"; };
+		DAF38D521A131564901DD540 /* libPods-Game2D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Game2D.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D51BEA315A52FA46ECE9A42 /* libPods-Game2D.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5288B7CB67F425931C6088A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62E3D5FF8448A1A81C5B0807 /* Pods-Game2D.debug.xcconfig */,
+				783414F6DEE797B801C46B5C /* Pods-Game2D.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5822D83E2AD2B2D7009CF5C2 = {
 			isa = PBXGroup;
 			children = (
 				5822D8492AD2B2D7009CF5C2 /* Game2D */,
 				5822D8482AD2B2D7009CF5C2 /* Products */,
+				5288B7CB67F425931C6088A2 /* Pods */,
+				C75A0569EE523F86B87FE462 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +77,57 @@
 		5822D8492AD2B2D7009CF5C2 /* Game2D */ = {
 			isa = PBXGroup;
 			children = (
-				5822D84A2AD2B2D7009CF5C2 /* AppDelegate.swift */,
-				5822D84C2AD2B2D7009CF5C2 /* SceneDelegate.swift */,
-				5822D84E2AD2B2D7009CF5C2 /* ViewController.swift */,
-				5822D8502AD2B2D7009CF5C2 /* Main.storyboard */,
-				5822D8532AD2B2D8009CF5C2 /* Assets.xcassets */,
-				5822D8552AD2B2D8009CF5C2 /* LaunchScreen.storyboard */,
-				5822D8582AD2B2D8009CF5C2 /* Info.plist */,
+				5822D8602AD2B36B009CF5C2 /* Models */,
+				5822D85E2AD2B34C009CF5C2 /* Views */,
+				5822D85F2AD2B35F009CF5C2 /* Controllers */,
+				5822D8612AD2B373009CF5C2 /* Utilities */,
 			);
 			path = Game2D;
+			sourceTree = "<group>";
+		};
+		5822D85E2AD2B34C009CF5C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5822D8552AD2B2D8009CF5C2 /* LaunchScreen.storyboard */,
+				5822D8502AD2B2D7009CF5C2 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5822D85F2AD2B35F009CF5C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5822D8662AD2EBAE009CF5C2 /* MenuViewController.swift */,
+				5822D84E2AD2B2D7009CF5C2 /* GameViewController.swift */,
+				5822D8682AD2EBC0009CF5C2 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5822D8602AD2B36B009CF5C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5822D8612AD2B373009CF5C2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5822D84A2AD2B2D7009CF5C2 /* AppDelegate.swift */,
+				5822D84C2AD2B2D7009CF5C2 /* SceneDelegate.swift */,
+				5822D8532AD2B2D8009CF5C2 /* Assets.xcassets */,
+				5822D8582AD2B2D8009CF5C2 /* Info.plist */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C75A0569EE523F86B87FE462 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAF38D521A131564901DD540 /* libPods-Game2D.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +137,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5822D85B2AD2B2D8009CF5C2 /* Build configuration list for PBXNativeTarget "Game2D" */;
 			buildPhases = (
+				2433E35A833742DFBED0BA24 /* [CP] Check Pods Manifest.lock */,
 				5822D8432AD2B2D7009CF5C2 /* Sources */,
 				5822D8442AD2B2D7009CF5C2 /* Frameworks */,
 				5822D8452AD2B2D7009CF5C2 /* Resources */,
@@ -133,12 +197,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2433E35A833742DFBED0BA24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Game2D-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5822D8432AD2B2D7009CF5C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5822D84F2AD2B2D7009CF5C2 /* ViewController.swift in Sources */,
+				5822D84F2AD2B2D7009CF5C2 /* GameViewController.swift in Sources */,
+				5822D8672AD2EBAE009CF5C2 /* MenuViewController.swift in Sources */,
+				5822D8692AD2EBC0009CF5C2 /* ProfileViewController.swift in Sources */,
 				5822D84B2AD2B2D7009CF5C2 /* AppDelegate.swift in Sources */,
 				5822D84D2AD2B2D7009CF5C2 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +378,7 @@
 		};
 		5822D85C2AD2B2D8009CF5C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62E3D5FF8448A1A81C5B0807 /* Pods-Game2D.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,12 +386,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DQ6AN9K3FQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Game2D/Info.plist;
+				INFOPLIST_FILE = Game2D/Utilities/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.racing-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,14 +402,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bojieitsit.Game2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5822D85D2AD2B2D8009CF5C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783414F6DEE797B801C46B5C /* Pods-Game2D.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,12 +421,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DQ6AN9K3FQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Game2D/Info.plist;
+				INFOPLIST_FILE = Game2D/Utilities/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.racing-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +437,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bojieitsit.Game2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

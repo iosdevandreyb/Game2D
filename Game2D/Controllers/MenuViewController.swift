@@ -9,6 +9,9 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +19,18 @@ class MenuViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    
+    
+    @IBAction func playButtonPressed(_ sender: UIButton) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    
+    
+    
+    @IBAction func profileButtonPressed(_ sender: UIButton) {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController else { return }
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
