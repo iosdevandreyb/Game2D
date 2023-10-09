@@ -8,21 +8,19 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    
     @IBOutlet weak var scoreLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        scoreLabel.text = "TOP Score: " + String(UserDefaults.standard.integer(forKey: "MaxScore"))
     }
-    
-
     
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
-
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else { return }
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     
