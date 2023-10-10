@@ -13,7 +13,6 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateScore()
         navigationController?.navigationBar.isHidden = true
     }
     
@@ -28,12 +27,18 @@ class MenuViewController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    
     @IBAction func profileButtonPressed(_ sender: UIButton) {
         guard let controller = storyboard?.instantiateViewController(
             withIdentifier: "ProfileViewController"
         ) as? ProfileViewController else { return }
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func playersButtonPressed(_ sender: UIButton) {
+            guard let controller = storyboard?.instantiateViewController(
+                withIdentifier: "TableViewController"
+            ) as? TableViewController else { return }
+            navigationController?.pushViewController(controller, animated: true)
     }
     
     func updateScore() {
