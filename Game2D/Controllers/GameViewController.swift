@@ -9,6 +9,8 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     var spaceship: UIImageView!
     var background: UIImageView!
     var currentScore: Int = 0
@@ -21,10 +23,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        // Создание фона
+//        background = UIImageView(image: UIImage(named: "background"))
+//        background.contentMode = .scaleAspectFill
+//        view.addSubview(background)
         
-        background = UIImageView(image: UIImage(named: "background"))
-        background.contentMode = .scaleAspectFill
-        view.addSubview(background)
         
         // Создание корабля
         spaceship = UIImageView(
@@ -102,6 +105,8 @@ class GameViewController: UIViewController {
                 stone.removeFromSuperview()
                 stoneViews.removeAll(where: { $0 == stone })
                 currentScore += 1
+                
+                scoreLabel.text = String(currentScore)
                 
                 let maxScore = UserDefaults.standard.integer(forKey: "MaxScore")
                 if currentScore > maxScore {
