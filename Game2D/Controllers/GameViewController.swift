@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     var displayLink: CADisplayLink!
     var stoneSpeed: CGFloat = 2
     let stoneCreationTime: TimeInterval = 2.0
+    let manager = StorageManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +102,7 @@ class GameViewController: UIViewController {
                 stone.removeFromSuperview()
                 stoneViews.removeAll(where: { $0 == stone })
                 currentScore += 1
+                
                 let maxScore = UserDefaults.standard.integer(forKey: "MaxScore")
                 if currentScore > maxScore {
                     UserDefaults.standard.setValue(currentScore, forKey: "MaxScore")
@@ -115,6 +117,8 @@ class GameViewController: UIViewController {
     
     // Функция для завершения игры после столкновения
     func gameOver(reason: String) {
+        
+        manager.updateTable(score: currentScore)
         
         displayLink.isPaused = true
         

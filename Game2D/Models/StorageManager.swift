@@ -9,6 +9,8 @@ import UIKit
 
 class StorageManager {
     
+    var scores = UserDefaults.standard.array(forKey: "scores") as? [Int] ?? [Int]()
+    
     func saveImage(image: UIImage) -> String? {
         guard let documentsDirectory = FileManager.default.urls(
             for: .documentDirectory,
@@ -43,6 +45,11 @@ class StorageManager {
         let fileURL = documntsDirectory.appendingPathComponent(name)
         let image = UIImage(contentsOfFile: fileURL.path)
         return image
+    }
+    
+    func updateTable(score: Int) {
+        scores.append(score)
+        UserDefaults.standard.set(scores, forKey: "scores")
     }
     
 }
