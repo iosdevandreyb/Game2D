@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="uzM-1u-8Yo" userLabel="Button Stack View">
-                                <rect key="frame" x="50" y="331" width="293" height="259"/>
+                                <rect key="frame" x="50" y="275" width="293" height="371.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJa-Im-Udy">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="34.333333333333336"/>
@@ -93,12 +93,17 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVq-2x-yCc">
-                                        <rect key="frame" x="0.0" y="224.66666666666663" width="293" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="224.66666666666669" width="293" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Your attempts"/>
                                         <connections>
                                             <action selector="playersButtonPressed:" destination="ZHW-OV-FbS" eventType="touchUpInside" id="b3J-iu-MWa"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15h-LS-8jl">
+                                        <rect key="frame" x="0.0" y="337" width="293" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Settings"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -209,6 +214,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGY-lk-SdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1100" y="-51"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="FEF-hw-Ybh">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="EOQ-7A-U3b" customClass="SettingsViewController" customModule="Game2D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRH-f3-nUa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Y4-0p-cZk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7aP-ng-Tfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="701"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="3IO-cR-LyT">
