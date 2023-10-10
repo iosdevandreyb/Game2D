@@ -10,23 +10,39 @@ import UIKit
 class GameViewController: UIViewController {
     
     var spaceship: UIImageView!
+    var background: UIImageView!
     var currentScore: Int = 0
     var stoneViews: [UIImageView] = []
     var displayLink: CADisplayLink!
-    let stoneSpeed: CGFloat = 200
+    var stoneSpeed: CGFloat = 2
     let stoneCreationTime: TimeInterval = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        background = UIImageView(image: UIImage(named: "background"))
+        background.contentMode = .scaleAspectFill
+        view.addSubview(background)
+        
         // Создание корабля
-        spaceship = UIImageView(frame: CGRect(x: self.view.frame.width / 2, y: self.view.frame.size.height * 0.8, width: 50, height: 100))
+        spaceship = UIImageView(
+            frame: CGRect(
+                x: self.view.frame.width / 2,
+                y: self.view.frame.size.height * 0.8,
+                width: 50,
+                height: 100
+            )
+        )
         spaceship.image = UIImage(named: "spaceship")
         view.addSubview(spaceship)
         
         
         // взаимодействие с кораблем
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        let tapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(handleTap)
+        )
         self.view.addGestureRecognizer(tapGestureRecognizer)
         
         displayLink = CADisplayLink(target: self, selector: #selector(update))
@@ -71,7 +87,7 @@ class GameViewController: UIViewController {
     
     @objc func update() {
         for stone in stoneViews {
-            stone.center.y += 2
+            stone.center.y += stoneSpeed
             if stone.frame.intersects(spaceship.frame) {
                 displayLink.isPaused = true
                 for stone in stoneViews {
@@ -84,7 +100,7 @@ class GameViewController: UIViewController {
             if stone.frame.maxY > view.bounds.maxY {
                 stone.removeFromSuperview()
                 stoneViews.removeAll(where: { $0 == stone })
-                
+                currentScore += 1
                 let maxScore = UserDefaults.standard.integer(forKey: "MaxScore")
                 if currentScore > maxScore {
                     UserDefaults.standard.setValue(currentScore, forKey: "MaxScore")
@@ -103,24 +119,36 @@ class GameViewController: UIViewController {
         displayLink.isPaused = true
         
         for stone in stoneViews {
-            stone.layer.removeAllAnimations() // Удаляем все анимации каждого камня
-            stone.removeFromSuperview() // Удаляем каждый камень из иерархии view
+            stone.layer.removeAllAnimations()
+            stone.removeFromSuperview()
         }
-        stoneViews.removeAll() // Очищаем массив камней
+        stoneViews.removeAll()
+        spaceship.removeFromSuperview()
         
-        spaceship.removeFromSuperview() // Удаляем старый корабль из иерархии view
         
         // Отображаем сообщение о конце игры
-        let alertController = UIAlertController(title: "Game Over", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(
+            title: "Game Over",
+            message: "",
+            preferredStyle: .alert
+        )
+        
         if reason == "Wall" {
             alertController.message = "You've hit a wall!"
         } else {
             alertController.message = "Your ship is destroyed by an asteroid!"
         }
-        let restartAction = UIAlertAction(title: "Try again", style: .default) { [weak self] _ in
+        
+        let restartAction = UIAlertAction(
+            title: "Try again",
+            style: .default
+        ) { [weak self] _ in
             self?.resetGame()
         }
-        let exitAction = UIAlertAction(title: "I want to go to mommy", style: .default) { [weak self] _ in
+        let exitAction = UIAlertAction(
+            title: "I want to go to mommy",
+            style: .default
+        ) { [weak self] _ in
             self?.exitGame()
         }
         alertController.addAction(restartAction)
@@ -130,12 +158,19 @@ class GameViewController: UIViewController {
     
     func resetGame() {
         // Создаем корабль снова
-        spaceship = UIImageView(frame: CGRect(x: self.view.frame.width / 2, y: self.view.frame.size.height * 0.8, width: 50, height: 100))
+        spaceship = UIImageView(
+            frame: CGRect(
+                x: self.view.frame.width / 2,
+                y: self.view.frame.size.height * 0.8, width: 50, height: 100
+            )
+        )
         spaceship.image = UIImage(named: "spaceship")
         view.addSubview(spaceship)
         
         // Перезапускаем CADisplayLink
         displayLink.isPaused = false
+        
+        currentScore = 0
     }
     
     func exitGame() {

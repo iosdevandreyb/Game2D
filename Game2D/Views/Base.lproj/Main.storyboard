@@ -118,30 +118,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PUS-2z-FzJ" userLabel="Button Stack View">
-                                <rect key="frame" x="50" y="629.33333333333337" width="293" height="88.666666666666629"/>
+                                <rect key="frame" x="50" y="575" width="293" height="143"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zi-sx-xNC">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Upload"/>
                                         <connections>
-                                            <action selector="UploadButtonPressed:" destination="BCF-PX-g4F" eventType="touchUpInside" id="I57-Wh-YC9"/>
+                                            <action selector="uploadButtonPressed:" destination="BCF-PX-g4F" eventType="touchUpInside" id="NYG-dU-Pof"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyJ-eX-uhg">
-                                        <rect key="frame" x="0.0" y="54.333333333333258" width="293" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="54.333333333333371" width="293" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Change name"/>
                                         <connections>
                                             <action selector="nameButtonPressed:" destination="BCF-PX-g4F" eventType="touchUpInside" id="RVa-H9-pHL"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOB-cT-RSx">
+                                        <rect key="frame" x="0.0" y="108.66666666666663" width="293" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Back to menu"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="BCF-PX-g4F" eventType="touchUpInside" id="KLI-4T-IjE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZOB-cT-RSx" secondAttribute="trailing" id="Qw5-pt-XSe"/>
                                     <constraint firstItem="pyJ-eX-uhg" firstAttribute="leading" secondItem="PUS-2z-FzJ" secondAttribute="leading" id="V8B-uC-z98"/>
                                     <constraint firstAttribute="trailing" secondItem="pyJ-eX-uhg" secondAttribute="trailing" id="ctg-LW-hf5"/>
                                     <constraint firstItem="0Zi-sx-xNC" firstAttribute="leading" secondItem="PUS-2z-FzJ" secondAttribute="leading" id="dYe-Q8-KZj"/>
                                     <constraint firstAttribute="trailing" secondItem="0Zi-sx-xNC" secondAttribute="trailing" id="qCd-mL-9Y0"/>
+                                    <constraint firstItem="ZOB-cT-RSx" firstAttribute="leading" secondItem="PUS-2z-FzJ" secondAttribute="leading" id="thD-dF-tmo"/>
                                 </constraints>
                             </stackView>
                         </subviews>

@@ -16,6 +16,7 @@
 		5822D8572AD2B2D8009CF5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5822D8552AD2B2D8009CF5C2 /* LaunchScreen.storyboard */; };
 		5822D8672AD2EBAE009CF5C2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D8662AD2EBAE009CF5C2 /* MenuViewController.swift */; };
 		5822D8692AD2EBC0009CF5C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D8682AD2EBC0009CF5C2 /* ProfileViewController.swift */; };
+		5822D88D2AD596B0009CF5C2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822D88C2AD596B0009CF5C2 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5822D8582AD2B2D8009CF5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5822D8662AD2EBAE009CF5C2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5822D8682AD2EBC0009CF5C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5822D88C2AD596B0009CF5C2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		62E3D5FF8448A1A81C5B0807 /* Pods-Game2D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game2D.debug.xcconfig"; path = "Target Support Files/Pods-Game2D/Pods-Game2D.debug.xcconfig"; sourceTree = "<group>"; };
 		783414F6DEE797B801C46B5C /* Pods-Game2D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game2D.release.xcconfig"; path = "Target Support Files/Pods-Game2D/Pods-Game2D.release.xcconfig"; sourceTree = "<group>"; };
 		DAF38D521A131564901DD540 /* libPods-Game2D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Game2D.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +54,6 @@
 				62E3D5FF8448A1A81C5B0807 /* Pods-Game2D.debug.xcconfig */,
 				783414F6DEE797B801C46B5C /* Pods-Game2D.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,6 +108,7 @@
 		5822D8602AD2B36B009CF5C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5822D88C2AD596B0009CF5C2 /* StorageManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5822D84F2AD2B2D7009CF5C2 /* GameViewController.swift in Sources */,
+				5822D88D2AD596B0009CF5C2 /* StorageManager.swift in Sources */,
 				5822D8672AD2EBAE009CF5C2 /* MenuViewController.swift in Sources */,
 				5822D8692AD2EBC0009CF5C2 /* ProfileViewController.swift in Sources */,
 				5822D84B2AD2B2D7009CF5C2 /* AppDelegate.swift in Sources */,
