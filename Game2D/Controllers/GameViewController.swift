@@ -11,20 +11,20 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var spaceship: UIImageView!
-    var background: UIImageView!
-    var currentScore: Int = 0
-    var stoneViews: [UIImageView] = []
-    var displayLink: CADisplayLink!
-    var stoneSpeed: CGFloat!
-    let stoneCreationTime: TimeInterval = 2.0
+    private var spaceship: UIImageView!
+    private var background: UIImageView!
+    private var currentScore: Int = 0
+    private var stoneViews: [UIImageView] = []
+    private var displayLink: CADisplayLink!
+    private var stoneSpeed: CGFloat!
+    private let stoneCreationTime: TimeInterval = 2.0
     let manager = StorageManager()
     let texture = TextureManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Скорость корабля
+        // Скорость корабля
         stoneSpeed = manager.checkDifficulty() ?? 2
         
         // Создание корабля
@@ -40,7 +40,7 @@ class GameViewController: UIViewController {
         view.addSubview(spaceship)
         
         
-        // взаимодействие с кораблем
+        // Взаимодействие с кораблем
         let tapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(handleTap)
