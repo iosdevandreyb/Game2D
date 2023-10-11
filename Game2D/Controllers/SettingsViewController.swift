@@ -10,10 +10,11 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     let texture = TextureManager()
+    let manager = StorageManager()
     
     @IBOutlet weak var asteroidSegmentView: UISegmentedControl!
     @IBOutlet weak var spaceshipSegmentView: UISegmentedControl!
-    
+    @IBOutlet weak var difficultySegmentView: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,24 @@ class SettingsViewController: UIViewController {
         spaceshipSegmentView.selectedSegmentIndex = UserDefaults
             .standard
             .integer(forKey: "spaceshipIndex")
+        difficultySegmentView.selectedSegmentIndex = UserDefaults
+            .standard
+            .integer(forKey: "difficultyIndex")
     }
+    
+    @IBAction func difficultySegmentChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            manager.setDifficulty(difficulty: 3)
+            
+        case 1:
+            manager.setDifficulty(difficulty: 6)
+        default:
+            break
+        }
+        UserDefaults.standard.set(sender.selectedSegmentIndex,forKey: "difficultyIndex")
+    }
+    
     
     @IBAction func asteroidSegmentChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {

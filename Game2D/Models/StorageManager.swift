@@ -52,4 +52,13 @@ class StorageManager {
         UserDefaults.standard.set(scores, forKey: "scores")
     }
     
+    func setDifficulty(difficulty: CGFloat) {
+        UserDefaults.standard.set(difficulty, forKey: "difficultyPoint")
+    }
+    
+    func checkDifficulty()  -> CGFloat? {
+        guard let difficulty = UserDefaults.standard.object(forKey: "difficultyPoint") as? CGFloat else { return 2 }
+        return difficulty
+    }
+    
 }

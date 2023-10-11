@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
     var currentScore: Int = 0
     var stoneViews: [UIImageView] = []
     var displayLink: CADisplayLink!
-    var stoneSpeed: CGFloat = 2
+    var stoneSpeed: CGFloat!
     let stoneCreationTime: TimeInterval = 2.0
     let manager = StorageManager()
     let texture = TextureManager()
@@ -24,6 +24,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Скорость корабля
+        stoneSpeed = manager.checkDifficulty() ?? 2
         
         // Создание корабля
         spaceship = UIImageView(
@@ -64,19 +66,16 @@ class GameViewController: UIViewController {
     private func handleTap(gesture: UITapGestureRecognizer) {
         let tapLocation = gesture.location(in: self.view)
         if tapLocation.x < self.view.center.x {
-            // если слева от центра, то двигайте влево
+            
             UIView.animate(withDuration: 0.5) {
                 self.spaceship.center.x -= 30
             }
-            
         } else {
-            // если справа от центра, то двигайте вправо
             UIView.animate(withDuration: 0.5) {
                 self.spaceship.center.x += 30
             }
         }
         
-        // ограничение перемещения машины в пределах экрана
         if self.spaceship.center.x < 25 {
             gameOver(reason: "Wall")
         } else if self.spaceship.center.x > self.view.bounds.width - 25 {
@@ -116,7 +115,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    // Функция для завершения игры после столкновения
     func gameOver(reason: String) {
         
         manager.updateTable(score: currentScore)
@@ -131,7 +129,6 @@ class GameViewController: UIViewController {
         spaceship.removeFromSuperview()
         
         
-        // Отображаем сообщение о конце игры
         let alertController = UIAlertController(
             title: "Game Over",
             message: "",
@@ -162,7 +159,6 @@ class GameViewController: UIViewController {
     }
     
     func resetGame() {
-        // Создаем корабль снова
         spaceship = UIImageView(
             frame: CGRect(
                 x: self.view.frame.width / 2,
@@ -172,7 +168,6 @@ class GameViewController: UIViewController {
         spaceship.image = UIImage(named: texture.loadShip() ?? "spaceship1")
         view.addSubview(spaceship)
         
-        // Перезапускаем CADisplayLink
         displayLink.isPaused = false
         
         currentScore = 0

@@ -238,21 +238,31 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-rX-xQW" userLabel="Settings Stack View">
-                                <rect key="frame" x="10" y="69" width="373" height="659"/>
+                                <rect key="frame" x="10" y="89" width="373" height="649"/>
                                 <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-zV-8c3">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="25"/>
+                                        <segments>
+                                            <segment title="EASY"/>
+                                            <segment title="HARD"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="difficultySegmentChanged:" destination="EOQ-7A-U3b" eventType="valueChanged" id="N14-XD-pqC"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tDI-Yk-RFB" userLabel="Asteroid Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="203"/>
+                                        <rect key="frame" x="0.0" y="24" width="373" height="192.33333333333334"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroid1" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-dZ-bzy">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="203"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="192.33333333333334"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroid2" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-xb-f5b">
-                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="203"/>
+                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="192.33333333333334"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vdw-jP-xc6">
-                                        <rect key="frame" x="0.0" y="203" width="373" height="26"/>
+                                        <rect key="frame" x="0.0" y="216.33333333333331" width="373" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="b2E-L7-jtq"/>
                                         </constraints>
@@ -265,18 +275,18 @@
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="grD-15-O8t" userLabel="Spaceship Stack View">
-                                        <rect key="frame" x="0.0" y="228.00000000000003" width="373" height="405.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="241.33333333333334" width="373" height="385.33333333333326"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceship1" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-w6-CjD">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="405.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="385.33333333333331"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceship2" translatesAutoresizingMaskIntoConstraints="NO" id="xh0-Y4-4tY">
-                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="405.66666666666669"/>
+                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="385.33333333333331"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7YO-OP-Kkq">
-                                        <rect key="frame" x="0.0" y="633.66666666666663" width="373" height="26.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="626.66666666666663" width="373" height="23.333333333333371"/>
                                         <segments>
                                             <segment title="Blue"/>
                                             <segment title="Green"/>
@@ -286,22 +296,26 @@
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="grD-15-O8t" firstAttribute="height" secondItem="tDI-Yk-RFB" secondAttribute="height" multiplier="2.00173" id="15Z-42-DCx"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Y4-0p-cZk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FLQ-rX-xQW" firstAttribute="top" secondItem="1Y4-0p-cZk" secondAttribute="top" constant="10" id="6dr-o5-VgQ"/>
                             <constraint firstItem="18a-pT-B8d" firstAttribute="leading" secondItem="1Y4-0p-cZk" secondAttribute="leading" constant="15" id="9RF-Oa-kUc"/>
                             <constraint firstItem="1Y4-0p-cZk" firstAttribute="trailing" secondItem="18a-pT-B8d" secondAttribute="trailing" constant="15" id="SDE-8Y-sjp"/>
-                            <constraint firstItem="18a-pT-B8d" firstAttribute="top" secondItem="FLQ-rX-xQW" secondAttribute="bottom" constant="30" id="nPh-Ux-f6u"/>
+                            <constraint firstItem="18a-pT-B8d" firstAttribute="top" secondItem="FLQ-rX-xQW" secondAttribute="bottom" constant="20" id="nPh-Ux-f6u"/>
                             <constraint firstItem="18a-pT-B8d" firstAttribute="bottom" secondItem="1Y4-0p-cZk" secondAttribute="bottom" constant="-20" id="ucB-m6-9hS"/>
                             <constraint firstItem="FLQ-rX-xQW" firstAttribute="leading" secondItem="1Y4-0p-cZk" secondAttribute="leading" constant="10" id="vVr-Vq-0yy"/>
                             <constraint firstAttribute="trailing" secondItem="FLQ-rX-xQW" secondAttribute="trailing" constant="10" id="wQq-S0-owm"/>
+                            <constraint firstItem="FLQ-rX-xQW" firstAttribute="top" secondItem="1Y4-0p-cZk" secondAttribute="top" constant="30" id="xzk-js-6jc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="asteroidSegmentView" destination="Vdw-jP-xc6" id="KPM-qC-vKS"/>
+                        <outlet property="difficultySegmentView" destination="MVc-zV-8c3" id="ooI-o5-OKC"/>
                         <outlet property="spaceshipSegmentView" destination="7YO-OP-Kkq" id="XjJ-eM-Plz"/>
                     </connections>
                 </viewController>
