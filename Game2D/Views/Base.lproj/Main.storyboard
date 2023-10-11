@@ -104,6 +104,9 @@
                                         <rect key="frame" x="0.0" y="337" width="293" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Settings"/>
+                                        <connections>
+                                            <action selector="settingsButtonPressed:" destination="ZHW-OV-FbS" eventType="touchUpInside" id="xqe-sd-9sH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -222,13 +225,89 @@
                     <view key="view" contentMode="scaleToFill" id="kRH-f3-nUa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18a-pT-B8d">
+                                <rect key="frame" x="15" y="758" width="363" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fk4-Ex-yly"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Back to menu"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="EOQ-7A-U3b" eventType="touchUpInside" id="bOx-7w-yEe"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-rX-xQW" userLabel="Settings Stack View">
+                                <rect key="frame" x="10" y="69" width="373" height="659"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tDI-Yk-RFB" userLabel="Asteroid Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="203"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroid1" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-dZ-bzy">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="203"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroid2" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-xb-f5b">
+                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="203"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vdw-jP-xc6">
+                                        <rect key="frame" x="0.0" y="203" width="373" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="b2E-L7-jtq"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Gray"/>
+                                            <segment title="Brown"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="asteroidSegmentChanged:" destination="EOQ-7A-U3b" eventType="valueChanged" id="Yo1-sg-UXR"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="grD-15-O8t" userLabel="Spaceship Stack View">
+                                        <rect key="frame" x="0.0" y="228.00000000000003" width="373" height="405.66666666666674"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceship1" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-w6-CjD">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="405.66666666666669"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceship2" translatesAutoresizingMaskIntoConstraints="NO" id="xh0-Y4-4tY">
+                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="405.66666666666669"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7YO-OP-Kkq">
+                                        <rect key="frame" x="0.0" y="633.66666666666663" width="373" height="26.333333333333371"/>
+                                        <segments>
+                                            <segment title="Blue"/>
+                                            <segment title="Green"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="spaceshipSegmentChanged:" destination="EOQ-7A-U3b" eventType="valueChanged" id="abr-Ak-Nyb"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1Y4-0p-cZk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FLQ-rX-xQW" firstAttribute="top" secondItem="1Y4-0p-cZk" secondAttribute="top" constant="10" id="6dr-o5-VgQ"/>
+                            <constraint firstItem="18a-pT-B8d" firstAttribute="leading" secondItem="1Y4-0p-cZk" secondAttribute="leading" constant="15" id="9RF-Oa-kUc"/>
+                            <constraint firstItem="1Y4-0p-cZk" firstAttribute="trailing" secondItem="18a-pT-B8d" secondAttribute="trailing" constant="15" id="SDE-8Y-sjp"/>
+                            <constraint firstItem="18a-pT-B8d" firstAttribute="top" secondItem="FLQ-rX-xQW" secondAttribute="bottom" constant="30" id="nPh-Ux-f6u"/>
+                            <constraint firstItem="18a-pT-B8d" firstAttribute="bottom" secondItem="1Y4-0p-cZk" secondAttribute="bottom" constant="-20" id="ucB-m6-9hS"/>
+                            <constraint firstItem="FLQ-rX-xQW" firstAttribute="leading" secondItem="1Y4-0p-cZk" secondAttribute="leading" constant="10" id="vVr-Vq-0yy"/>
+                            <constraint firstAttribute="trailing" secondItem="FLQ-rX-xQW" secondAttribute="trailing" constant="10" id="wQq-S0-owm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="asteroidSegmentView" destination="Vdw-jP-xc6" id="KPM-qC-vKS"/>
+                        <outlet property="spaceshipSegmentView" destination="7YO-OP-Kkq" id="XjJ-eM-Plz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aP-ng-Tfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="701"/>
+            <point key="canvasLocation" x="-63.358778625954194" y="700.70422535211276"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="3IO-cR-LyT">
@@ -287,7 +366,11 @@
     <resources>
         <image name="DefaultAvatar" width="946" height="946"/>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="104"/>
+        <image name="asteroid1" width="250" height="250"/>
+        <image name="asteroid2" width="250" height="250"/>
         <image name="background" width="750" height="1333"/>
+        <image name="spaceship1" width="500" height="500"/>
+        <image name="spaceship2" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

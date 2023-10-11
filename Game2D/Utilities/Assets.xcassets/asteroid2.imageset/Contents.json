@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "spaceship.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "asteroid2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

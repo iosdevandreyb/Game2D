@@ -35,16 +35,27 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func playersButtonPressed(_ sender: UIButton) {
-            guard let controller = storyboard?.instantiateViewController(
-                withIdentifier: "TableViewController"
-            ) as? TableViewController else { return }
-            navigationController?.pushViewController(controller, animated: true)
+        guard let controller = storyboard?.instantiateViewController(
+            withIdentifier: "TableViewController"
+        ) as? TableViewController else { return }
+        navigationController?.pushViewController(controller, animated: true)
     }
     
+    
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        guard let controller = storyboard?.instantiateViewController(
+            withIdentifier: "SettingsViewController"
+        ) as? SettingsViewController else { return }
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
     func updateScore() {
-        scoreLabel.text = "TOP Score: " + String(
+        scoreLabel.text = "TOP Score: " + String (
             UserDefaults.standard.integer(forKey: "MaxScore")
         )
     }
     
 }
+
+

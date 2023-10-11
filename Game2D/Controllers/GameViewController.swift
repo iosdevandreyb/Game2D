@@ -19,14 +19,10 @@ class GameViewController: UIViewController {
     var stoneSpeed: CGFloat = 2
     let stoneCreationTime: TimeInterval = 2.0
     let manager = StorageManager()
+    let texture = TextureManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        // Создание фона
-//        background = UIImageView(image: UIImage(named: "background"))
-//        background.contentMode = .scaleAspectFill
-//        view.addSubview(background)
         
         
         // Создание корабля
@@ -35,10 +31,10 @@ class GameViewController: UIViewController {
                 x: self.view.frame.width / 2,
                 y: self.view.frame.size.height * 0.8,
                 width: 50,
-                height: 100
+                height: 50
             )
         )
-        spaceship.image = UIImage(named: "spaceship")
+        spaceship.image = UIImage(named: texture.loadShip() ?? "spaceship1")
         view.addSubview(spaceship)
         
         
@@ -58,7 +54,7 @@ class GameViewController: UIViewController {
     @objc func createStone() {
         let stone = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         stone.center.x = CGFloat.random(in: 0...view.bounds.maxX)
-        stone.image = UIImage(named: "asteroid")
+        stone.image = UIImage(named: texture.loadStone() ?? "asteroid1")
         view.addSubview(stone)
         stoneViews.append(stone)
     }
@@ -173,7 +169,7 @@ class GameViewController: UIViewController {
                 y: self.view.frame.size.height * 0.8, width: 50, height: 100
             )
         )
-        spaceship.image = UIImage(named: "spaceship")
+        spaceship.image = UIImage(named: texture.loadShip() ?? "spaceship1")
         view.addSubview(spaceship)
         
         // Перезапускаем CADisplayLink
