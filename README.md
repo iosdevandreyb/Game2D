@@ -13,11 +13,6 @@ Embark on 'Lost in Space', an exciting 2D space adventure, where you navigate a 
   title="Optional title"
   style="display: inline-block; margin: 0 auto; width: 300px">
   <img
-  src="https://github.com/bojieitsit/Game2D/assets/88778576/b80ec173-cc00-42bb-8401-42a5b39d2d5b"
-  alt="Alt text"
-  title="Optional title"
-  style="display: inline-block; margin: 0 auto; width: 300px">
-  <img
   src="https://github.com/bojieitsit/Game2D/assets/88778576/0df13c27-7965-441d-b317-e9f0a58c84d2"
   alt="Alt text"
   title="Optional title"
